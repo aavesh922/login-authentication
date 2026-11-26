@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Authentication System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page-shell">
+    <section class="auth-card" aria-labelledby="app-title">
+      <div class="brand-mark" aria-hidden="true">L</div>
+      <p class="eyebrow">WELCOME</p>
+      <h1 id="app-title">Your account, your space.</h1>
+      <p class="subtitle">Sign in to continue, or create a new account.</p>
+
+      <div class="tabs" role="tablist" aria-label="Authentication options">
+        <button class="tab active" id="login-tab" role="tab" aria-selected="true" aria-controls="login-panel">Login</button>
+        <button class="tab" id="signup-tab" role="tab" aria-selected="false" aria-controls="signup-panel">Sign up</button>
+      </div>
+
+      <div id="notice" class="notice" role="status" aria-live="polite"></div>
+
+      <form id="login-panel" class="auth-form" novalidate>
+        <label for="login-email">Email address</label>
+        <input id="login-email" type="email" placeholder="you@example.com" autocomplete="email" required>
+        <label for="login-password">Password</label>
+        <div class="password-wrap">
+          <input id="login-password" type="password" placeholder="Enter your password" autocomplete="current-password" required>
+          <button class="show-password" type="button" data-target="login-password" aria-label="Show password">Show</button>
+        </div>
+        <button class="primary-btn" type="submit">Sign in <span aria-hidden="true">→</span></button>
+      </form>
+
+      <form id="signup-panel" class="auth-form hidden" novalidate>
+        <label for="signup-name">Full name</label>
+        <input id="signup-name" type="text" placeholder="Your name" autocomplete="name" required>
+        <label for="signup-email">Email address</label>
+        <input id="signup-email" type="email" placeholder="you@example.com" autocomplete="email" required>
+        <label for="signup-password">Create password</label>
+        <div class="password-wrap">
+          <input id="signup-password" type="password" placeholder="At least 8 characters" autocomplete="new-password" required>
+          <button class="show-password" type="button" data-target="signup-password" aria-label="Show password">Show</button>
+        </div>
+        <p class="hint">Use at least 8 characters, including a letter and a number.</p>
+        <button class="primary-btn" type="submit">Create account <span aria-hidden="true">→</span></button>
+      </form>
+
+      <section id="dashboard" class="dashboard hidden" aria-live="polite">
+        <div class="success-icon">✓</div>
+        <h2>You're signed in!</h2>
+        <p id="welcome-message"></p>
+        <button id="logout-btn" class="primary-btn" type="button">Log out</button>
+      </section>
+
+      <p class="footer-note">TASK 4 <span>•</span> HTML · CSS · Vanilla JavaScript</p>
+    </section>
+    <p class="security-note">Demo project · Uses browser storage on this device only</p>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
